@@ -18,8 +18,7 @@ passport.use(
         // options for google strategy
         clientID: keys.google.clientID,
         clientSecret: keys.google.clientSecret,
-        callbackURL: '/auth/google/redirect',
-        redirect_uri:  'http://hometaskss.herokuapp.com/auth/google/redirect'
+        callbackURL: 'http://hometaskss.herokuapp.com/auth/google/redirect'
     }, (accessToken, refreshToken, profile, done) => {
         // check if user already exists in our own db
         User.findOne({googleId: profile.id}).then((currentUser) => {
