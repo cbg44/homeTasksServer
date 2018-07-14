@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1353a114-7d9d-4359-824d-b250edb1cbe2" name="Default" comment="" />
+    <list default="true" id="1353a114-7d9d-4359-824d-b250edb1cbe2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth-routes.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,15 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tasks-routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/tasks-routes.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -85,8 +79,8 @@
       <file leaf-file-name="auth-routes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/auth-routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="277">
+              <caret line="21" column="2" selection-start-line="21" selection-end-line="24" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -96,6 +90,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statistics-routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/statistics-routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -146,6 +149,7 @@
         <option value="$PROJECT_DIR$/views/statistics.ejs" />
         <option value="$PROJECT_DIR$/views/tasks.ejs" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/routes/auth-routes.js" />
       </list>
     </option>
   </component>
@@ -268,12 +272,12 @@
       <workItem from="1528206027270" duration="3335000" />
       <workItem from="1528539442634" duration="29034000" />
       <workItem from="1528631691730" duration="1815000" />
-      <workItem from="1531564837664" duration="6778000" />
+      <workItem from="1531564837664" duration="7019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47531000" />
+    <option name="totallyTimeSpent" value="47772000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -286,7 +290,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1227608" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
@@ -594,13 +597,6 @@
     <entry file="file://$PROJECT_DIR$/../DeliveryWebServer/index.js" />
     <entry file="file://$PROJECT_DIR$/views/statistics.html" />
     <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js" />
-    <entry file="file://$PROJECT_DIR$/routes/statistics-routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/userModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -709,10 +705,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/statistics-routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/auth-routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="277">
+          <caret line="21" column="2" selection-start-line="21" selection-end-line="24" selection-end-column="5" />
         </state>
       </provider>
     </entry>
