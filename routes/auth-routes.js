@@ -21,8 +21,7 @@ router.get('/google', passport.authenticate('google', {
 // hand control to passport to use code to grab profile info
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
     // res.send(req.user);
-  var backURL = req.header('Referer') || '/';
-  res.json({redir: backURL});
-});
+    res.render("login", {referer:req.headers.referer});
+  });
 
 module.exports = router;
