@@ -22,8 +22,7 @@ router.get('/google', passport.authenticate('google', {
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
     // res.send(req.user);
   var backURL = req.header('Referer') || '/';
-  res.redirect(backURL);
-    //res.redirect('/profile');
+  res.json({redir: backURL});
 });
 
 module.exports = router;
