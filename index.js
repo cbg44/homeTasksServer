@@ -108,24 +108,21 @@ app.put('/closeATask', (req, res) => {
 
 //Profile
 app.get('/getUserProfileSummary', (req, res) => {
-  var usr = req.user;
-  var usrid = usr.id;
-  UserDAO.getUserProfileSummary(usrid).then(data=>res.json(data));
+  UserDAO.getUserProfileSummary().then(data=>res.json(data));
 });
-app.get('/getUserCompletedTasks', (req, res) => {
-  var usr = req.user;
-  var usrid = usr.id;
-  UserDAO.getUserCompletedTasks(usrid).then(data=>res.json(data));
+app.post('/getUserCompletedTasks', (req, res) => {
+  var googleId = req.body.googleId;
+  UserDAO.getUserCompletedTasks(googleId).then(data=>res.json(data));
 });
-app.get('/getUserSavedTasks', (req, res) => {
-  var usr = req.user;
-  var usrid = usr.id;
-  UserDAO.getUserSavedTasks(usrid).then(data=>res.json(data));
+app.post('/getUserSavedTasks', (req, res) => {
+  var googleId = req.body.googleId;
+  UserDAO.getUserSavedTasks(googleId).then(data=>res.json(data));
 });
-app.get('/getUserAchievments', (req, res) => {
-  var usr = req.user;
-  var usrid = usr.id;
-  UserDAO.getUserAchievments(usrid).then(data=>res.json(data));
+app.post('/getUserAchievments', (req, res) => {
+  var googleId = req.body.googleId;
+  console.log(req.body);
+  console.log(googleId);
+  UserDAO.getUserAchievments(googleId).then(data=>res.json(data));
 });
 //
 

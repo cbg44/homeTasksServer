@@ -12,17 +12,17 @@ var TaskSchema = new Schema({
     created_date: {type: Date, default:Date.now},
     taken_date: {type: Date, default: null}
   },
-  /*status: {
-    type: String,
-    default: 'Available'
-  }*/
-  category: {
-    type:String,
-    required: 'please enter the category of the task'
-  },
-  points: {
+  scores: {
     type:Number,
-    required: 'please enter the points of the task'
+    required: 'please enter the scores of the task'
+  },
+  timetocomplete: {
+    type:Number,
+    required: 'please enter the time to complete of the task'
+  },
+   timeittakes: {
+    type:Number,
+    required: 'please enter the time it takes of the task'
   },
   assignee: String, //id of user
   isTimeLimited:{

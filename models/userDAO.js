@@ -1,6 +1,7 @@
 
 User = require('../models/userModel');
 Task = require('../models/tasksModel');
+require('mongoose').set('debug', true);
 
 
 module.exports = class userDAO {
@@ -56,19 +57,34 @@ module.exports = class userDAO {
     // console.log(scores);
     
     }
-    static getUserCompletedTasks(usrid){
+    static getUserCompletedTasks(usrId){
       console.log("getting completed tasks");
-      return User.find({_id: usrid}, 'tasks.completed_tasks')
-            .catch(() => error("err"));
+      var query = User.find({googleId: usrId}, 'tasks.completed_tasks')
+      return query;
+
+      // console.log("tasks: " + tasks)
+      // console.log(
+      // tasks.reduce((arr, ele) => ([].push.apply(arr, ele.Attributes.filter((v) => arr.indexOf(v) == -1)), arr), [])
+      // );
+
+      // // Task.find({ _id: { $in: tasks }, 'name' }, function (err, result) {
+      // // result = result.map(function (document) {
+      // //     return document.value
+      // //   });
+      // // });
+      // // console.log(result);
+      // // return result
+      // var names = Task.find({ _id: { $in: tasks }}, 'name');
+      // var name_res = query.exec(function (err, name) {console.log("name: " + name)});
     }
-    static getUserSavedTasks(usrid){
+    static getUserSavedTasks(usrId){
       console.log("getting saved tasks");
-      return User.find({_id: usrid}, 'tasks.taken_tasks')
+      return User.find({googleId: usrId}, 'tasks.taken_tasks')
             .catch(() => error("err"));
     }
-    static getUserAchievments(usrid){
-      console.log("getting achievments");
-      return User.find({_id: usrid}, 'achievments')
+    static getUserAchievments(usrId){
+      console.log("getting achievments: " + usrId);
+      return User.find({googleId: usrId}, 'achievments')
             .catch(() => error("err"));
     }
     static getAllScores(){
@@ -84,17 +100,17 @@ module.exports = class userDAO {
     }
 
     static takeATask(taskId, usrId){
-      return User.findOneAndUpdate({_id: usrId}, {$push: {"tasks.taken_tasks": taskId}}, {new: false})
+      return User.findOneAndUpdate({googleId: usrId}, {$push: {"tasks.taken_tasks": taskId}}, {new: false})
       .catch(() => error("err"));
     }
 
    static closeATask(taskId, usrId){
-     return User.findOneAndUpdate({_id: usrId}, {$push: {"tasks.completed_tasks": taskId}}, {new: false})
+     return User.findOneAndUpdate({googleId: usrId}, {$push: {"tasks.completed_tasks": taskId}}, {new: false})
       .catch(() => error("err"));
     }
 
     static getMedalist(){
-     return User.find({}, 'achievments')
+     return User.find({}, 'achievments name')
       .catch(() => error("err"));
     }
     
